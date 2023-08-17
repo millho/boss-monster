@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+
+<body data-bs-theme="dark" class="debug">
+
+    <!-- SECTION title -->
+    <header>
+        <h1>Boss Monster</h1>
+    </header>
+
+    <!-- SECTION cards -->
+    <main class="container-fluid">
+
+        <!-- NOTE hero cards -->
+        <section class="row">
+            <div class="col-3 hero-card">
+                <div id="slateStats">
+                    <h3>${hero.name}</h3>
+                    <h3>HP: ${hero.health}</h3>
+                    <h3>Gold:''</h3>
+                    <h3>LVL:''</h3>
+
+                </div>
+            </div>
+            <div class="col-3 hero-card">
+                <div id="flintStats">
+                    <h3>${hero.name}</h3>
+                    <h3>HP: ${hero.health}</h3>
+                    <h3>Gold:''</h3>
+                    <h3>LVL:''</h3>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NOTE boss -->
+        <section class="row">
+            <div class="col-6 boss-card">
+                <button onclick="attack()">
+                    <img class="boss-img"
+                        src="https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                        alt="">
+                </button>
+                <div id="bossStats">
+                    <h3>health: 100</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOTE game data -->
+        <section class="row">
+            <div class="col-6 data-card">
+                data
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <script src="ap.js"></script>
+</body>
+
+</html>
