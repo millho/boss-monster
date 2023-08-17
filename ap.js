@@ -73,6 +73,8 @@ setInterval(fightBack, 1000)
 
 function fightBack() {
 
+    // trying to make no more fightBack if boss health equals zero
+
     heros.forEach(hero => {
         hero.health -= boss.damage
 
